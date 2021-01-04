@@ -15,4 +15,3 @@ FROM python:3.7.3-stretch
 
 ## Step 5:
 # Run app.py at container launch
-

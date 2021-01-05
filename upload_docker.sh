@@ -11,7 +11,7 @@ dockerpath=austinmeyer/devops_microservice_machine_learning
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-cat /Users/austinmeyer/Desktop/PW.txt | docker login -u austinmeyer -password-stdin
+cat /Users/austinmeyer/Desktop/PW.txt | docker login -u austinmeyer --password-stdin
 docker tag devops_microservice_machine_learning $dockerpath
 
 # Step 3:

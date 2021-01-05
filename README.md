@@ -1,4 +1,4 @@
-[![AustinAMeyer](https://circleci.com/gh/AustinAMeyer/DevOps_Microservices.svg?style=svg)](https://circleci.com/gh/AustinAMeyer/DevOps_Microservices)
+[![AustinAMeyer](https://circleci.com/gh/AustinAMeyer/DevOps_Microservices.svg?style=svg)]
 
 ## Project Overview
 

@@ -5,14 +5,16 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
+dockerpath=austinmeyer/devops_microservice_machine_learning
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-
+kubectl run devops-microservice-machine-learning --generator=run-pod/v1 --image=$dockerpath --port=80 --labels app=devops-microservice-machine-learning
 
 # Step 3:
 # List kubernetes pods
+kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-
+kubectl port-forward devops-microservice-machine-learning 8000:80

@@ -1,0 +1,47 @@
+
+Output from terminal after running ./make_prediction.sh:
+
+austinmeyer@austins-mbp DevOps_Microservices % ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+Output from main terminal window once that command is run after ./run_kubernetes.sh:
+
+(.devops) austinmeyer@austins-mbp DevOps_Microservices % ./run_kubernetes.sh
+Flag --generator has been deprecated, has no effect and will be removed in the future.
+The Pod "devops_microservice_machine_learning" is invalid: 
+* metadata.name: Invalid value: "devops_microservice_machine_learning": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+* spec.containers[0].name: Invalid value: "devops_microservice_machine_learning": a lowercase RFC 1123 label must consist of lower case alphanumeric characters or '-', and must start and end with an alphanumeric character (e.g. 'my-name',  or '123-abc', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?')
+No resources found in default namespace.
+Error from server (NotFound): pods "devops_microservice_machine_learning" not found
+(.devops) austinmeyer@austins-mbp DevOps_Microservices % ./run_kubernetes.sh
+Flag --generator has been deprecated, has no effect and will be removed in the future.
+pod/devops-microservice-machine-learning created
+NAME                                   READY   STATUS              RESTARTS   AGE
+devops-microservice-machine-learning   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) austinmeyer@austins-mbp DevOps_Microservices % kubectl get pod
+NAME                                   READY   STATUS              RESTARTS   AGE
+devops-microservice-machine-learning   0/1     ContainerCreating   0          23s
+(.devops) austinmeyer@austins-mbp DevOps_Microservices % kubectl get pod
+NAME                                   READY   STATUS              RESTARTS   AGE
+devops-microservice-machine-learning   0/1     ContainerCreating   0          46s
+(.devops) austinmeyer@austins-mbp DevOps_Microservices % kubectl get pod
+NAME                                   READY   STATUS    RESTARTS   AGE
+devops-microservice-machine-learning   1/1     Running   0          2m34s
+(.devops) austinmeyer@austins-mbp DevOps_Microservices % ./run_kubernetes.sh
+Flag --generator has been deprecated, has no effect and will be removed in the future.
+Error from server (AlreadyExists): pods "devops-microservice-machine-learning" already exists
+NAME                                   READY   STATUS    RESTARTS   AGE
+devops-microservice-machine-learning   1/1     Running   0          2m39s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+kubectl logs containername
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000

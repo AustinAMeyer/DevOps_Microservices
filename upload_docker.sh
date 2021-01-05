@@ -12,9 +12,8 @@ dockerpath=austinmeyer/devops_microservice_machine_learning
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login 
-
+docker image tag devops_microservice_machine_learning devops_microservice_machine_learning
 
 # Step 3:
 # Push image to a docker repository
 docker image push $dockerpath
-docker push austinmeyer/devops_microservice_machine_learning:latest devops_microservice_machine_learning

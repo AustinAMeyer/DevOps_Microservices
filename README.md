@@ -49,3 +49,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Hadolint
 * pylint
 * Docker & Docker-Hub Registry
+* bash
